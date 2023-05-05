@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RedisConfig"
+    targetNamespace="http://tempuri.org/RedisConfig.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/RedisConfig.xsd"
+    xmlns:mstns="http://tempuri.org/RedisConfig.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="ReadWriteServer" type="xs:string">
+  </xs:element>
+  <xs:element name="ReadOnlyServer" type="xs:string">
+  </xs:element>
+  <xs:element name="MaxWritePoolSize" type="xs:int">
+  </xs:element>
+  <xs:element name="MaxReadPoolSize" type="xs:int">
+  </xs:element>
+  <xs:element name="IdleTimeOutSecs" type="xs:int">
+  </xs:element>
+  <xs:element name="ConnectTimeout" type="xs:int">
+  </xs:element>
+  <xs:element name="SendTimeout" type="xs:int">
+  </xs:element>
+  <xs:element name="ReceiveTimeout" type="xs:int">
+  </xs:element>
+  <xs:element name="PoolTimeout" type="xs:int">
+  </xs:element>
+  <xs:element name="DefaultDb" type="xs:int">
+  </xs:element>
+  
+  <xs:element name="RedisClientConfig" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MaxWritePoolSize" maxOccurs="1" ></xs:element>
+        <xs:element ref="MaxReadPoolSize"  maxOccurs="1" ></xs:element>
+        <xs:element ref="IdleTimeOutSecs"  maxOccurs="1" ></xs:element>
+        <xs:element ref="ConnectTimeout"  maxOccurs="1" ></xs:element>
+        <xs:element ref="SendTimeout"  maxOccurs="1" ></xs:element>
+        <xs:element ref="ReceiveTimeout"  maxOccurs="1" ></xs:element>
+        <xs:element ref="PoolTimeout"  maxOccurs="1" ></xs:element>
+        <xs:element ref="DefaultDb" maxOccurs="1"  ></xs:element>
+        <xs:element ref="ReadOnlyServer"  maxOccurs="10"></xs:element>
+        <xs:element ref="ReadWriteServer" maxOccurs="10" ></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
